@@ -4,11 +4,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- default / black / black-translucent -->
 <meta name="format-detection" content="telephone=no"/>
-<link rel="apple-touch-icon" href="sabaekanko.png"/>
-<meta property="og:image" content="http://fukuno.jig.jp/app/sabarepo/ss3.jpg">
-<link rel="apple-touch-icon" href="http://fukuno.jig.jp/app/sabarepo/ss3.jpg"/>
+<meta property="og:image" content="https://codeforfukuno.github.io/sabarepo/ss.jpg">
+<link rel="apple-touch-icon" href="https://codeforfukuno.github.io/sabarepo/ss.jpg"/>
 <script src="lib/fukuno.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="https://maps.google.com/maps/api/js?apikey=AIzaSyAf6cUg-eT35val-ousrKRw9C2K4dA9W7g"></script>
 <script src="lib/fukuno-map.js"></script>
 <script>"use strict";
 var map;
@@ -32,8 +31,7 @@ window.onload = function() {
 	map = new Map("map");
 	var bounds = new LatLngBounds();
 
-	var url = "http://sabae.club/poslog/index.xml";
-	var url2 = "http://api.odp.jig.jp/sabarepo/poslog/index.json?callback=";
+	var url2 = "https://api.odp.jig.jp/sabarepo/poslog/index.json?callback=";
 
 	var hash = document.location.hash;
 	var seltype = "new";
@@ -105,22 +103,9 @@ window.onload = function() {
 		selected();
 	};
 
-	xml2json(url, function(data) {
-		var items1 = data.items.item;
-//		dump(items);
-		jsonp(url2 + getCallbackMethod(function(data) {
-			var items2 = data.items;
-
-			var items = [];
-			for (var i = 0; i < items1.length; i++) {
-				items.push(items1[i]);
-			}
-			for (var i = 0; i < items2.length; i++) {
-				items.push(items2[i]);
-			}
-			viewItems(items);
-		}));
-	});
+	jsonp(url2 + getCallbackMethod(function(data) {
+		viewItems(data.items);
+	}));
 
 	var mapicons = [];
 	var clearMapItems = function() {

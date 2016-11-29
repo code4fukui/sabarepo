@@ -35,7 +35,7 @@ window.onload = function() {
 
 	var hash = document.location.hash;
 	var seltype = "new";
-	if (hash.length > 0) {
+	if (hash.length > 1) {
 		seltype = decodeURIComponent(hash.substring(1));
 	}
 
@@ -163,7 +163,7 @@ window.onload = function() {
 			} else if (nn >= 10 && nn <= 10 + 26) {
 				c = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".substring(nn - 10, nn - 10 + 1);
 			}
-			var imgurl = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=" + encodeURI(c) + "|" + col + "|000000";
+			var imgurl = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=" + encodeURI(c) + "|" + col + "|000000";
 //			var icon = col ? new MapMarker(map, pos, col) : new MapMarker(map, pos);
 			var icon = new MapMarker(map, pos, imgurl);
 			icon.data = item;
@@ -409,9 +409,9 @@ a {
 <div id="list"></div>
 
 <div id='credit'>
-See Also: <a href=http://www.city.sabae.fukui.jp/pageview.html?id=17621 target=_blank>福井県鯖江市＞市民協働アプリ ”さばれぽ” iOS誕生</a><br>
-DATA: CC BY <a href=http://sabae.club/ target=_blank>Code for Sabae</a>　（<a href=https://itunes.apple.com/jp/app/sabarepo-yunoiitokoroya-xue/id1131118530?l=en&mt=8 target=_blank>さばれぽ for iOS</a> / <a href=https://play.google.com/store/apps/details?id=jp.jig.product.odp.android.sabarepo&hl=ja target=_blank>さばれぽ for Android</a>）<br>
-APP: CC BY <a href=http://fukuno.jig.jp/ target=_blank>taisukef / Code for Fukui</a></div>
+See Also: <a href="http://www.city.sabae.fukui.jp/pageview.html?id=17621" target="_blank">福井県鯖江市＞市民協働アプリ ”さばれぽ” iOS誕生</a><br>
+DATA: CC BY <a href="http://sabae.club/" target="_blank">Code for Sabae</a>　（<a href="https://itunes.apple.com/jp/app/sabarepo-yunoiitokoroya-xue/id1131118530?l=en&mt=8" target="_blank">さばれぽ for iOS</a> / <a href="https://play.google.com/store/apps/details?id=jp.jig.product.odp.android.sabarepo&hl=ja" target="_blank">さばれぽ for Android</a>）<br>
+APP: CC BY <a href="http://fukuno.jig.jp/" target="_blank">taisukef / Code for Fukui</a></div>
 </div>
 
 </body>

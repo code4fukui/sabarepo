@@ -38,7 +38,6 @@ window.onload = function() {
 	if (hash.length > 1) {
 		seltype = decodeURIComponent(hash.substring(1));
 	}
-	console.log("'" + hash + "'", "'" + seltype + "'");
 
 	// button
 	get("btn").onclick = function() {
@@ -164,7 +163,7 @@ window.onload = function() {
 			} else if (nn >= 10 && nn <= 10 + 26) {
 				c = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".substring(nn - 10, nn - 10 + 1);
 			}
-			var imgurl = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=" + encodeURI(c) + "|" + col + "|000000";
+			var imgurl = "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=" + encodeURI(c) + "|" + col + "|000000";
 //			var icon = col ? new MapMarker(map, pos, col) : new MapMarker(map, pos);
 			var icon = new MapMarker(map, pos, imgurl);
 			icon.data = item;

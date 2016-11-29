@@ -35,7 +35,7 @@ window.onload = function() {
 
 	var hash = document.location.hash;
 	var seltype = "new";
-	if (hash.length > 0) {
+	if (hash.length > 1) {
 		seltype = decodeURIComponent(hash.substring(1));
 	}
 	console.log("'" + hash + "'", "'" + seltype + "'");

@@ -38,6 +38,7 @@ window.onload = function() {
 	if (hash.length > 0) {
 		seltype = decodeURIComponent(hash.substring(1));
 	}
+	console.log("'" + hash + "'", "'" + seltype + "'");
 
 	// button
 	get("btn").onclick = function() {

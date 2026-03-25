@@ -1,25 +1,29 @@
 # sabarepo
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-A web-based viewer for the "Sabarepo" project, which allows users to browse and view information about various locations and events in the Sabae City area.
+さばれぽビューワー
 
-## Demo
-The project is hosted at [https://codeforfukui.github.io/sabarepo/](https://codeforfukui.github.io/sabarepo/)
+**Live demo**: https://code4fukui.github.io/sabarepo/
 
-## Features
-- Displays a map with markers for various locations and events
-- Allows filtering of displayed items by type (e.g., "Sabae Scenery", "Interesting", "Danger Spots")
-- Provides detailed information about each item, including title, type, timestamp, and related images
-- Supports clicking on map markers or list items to view more details
+## Technology Stack
 
-## Requirements
-This project requires a modern web browser with JavaScript enabled.
 
-## Usage
-To use the Sabarepo viewer, simply open the [project website](https://codeforfukui.github.io/sabarepo/) in your web browser. You can then browse the available locations and events, filter the display by type, and click on items to view more details.
+## Project Structure
 
-## Data / API
-The Sabarepo viewer retrieves its data from the [Sabarepo API](https://api.odp.jig.jp/sabarepo/poslog/index.json), which provides information about various locations and events in the Sabae City area.
+- `lib/` — Shared libraries and utilities
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/sabarepo/
+
+## Data Sources
+
+- DATA: CC BY Code for Sabae （ さばれぽ for iOS / さばれぽ for Android ）
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.
